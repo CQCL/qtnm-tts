@@ -6,4 +6,4 @@ from .qubitisation_registerbox import (
     QControlSquareQubitiseBox,
 )
 
-__all__ = ["QubitiseBox", "QControlQubitiseBox", "QControlSquareQubitiseBox"]
+__all__ = ["QControlQubitiseBox", "QControlSquareQubitiseBox", "QubitiseBox"]

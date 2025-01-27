@@ -6,7 +6,7 @@ from .prepare_multiplexor import PrepareMultiplexorBox
 
 __all__ = [
     "PrepareBox",
-    "PrepareQRegs",
     "PrepareCircBox",
     "PrepareMultiplexorBox",
+    "PrepareQRegs",
 ]

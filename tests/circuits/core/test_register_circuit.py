@@ -108,7 +108,7 @@ def test_add_registerbox_noqregmap():
     circ = lcu_box.initialise_circuit()
     circ.add_q_register("ancilla", 3)
 
-    assert type(circ.add_registerbox(lcu_box)) == RegisterCircuit
+    assert isinstance(circ.add_registerbox(lcu_box), RegisterCircuit)
 
     # test fails if qubits are not a subset of the circuit qubits
     init_circ = RegisterCircuit()

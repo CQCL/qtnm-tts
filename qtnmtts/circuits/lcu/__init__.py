@@ -7,8 +7,8 @@ from .index_operator import SerialLCUOperator
 
 __all__ = [
     "LCUBox",
-    "LCUQRegs",
-    "LCUMultiplexorBox",
     "LCUCustomBox",
+    "LCUMultiplexorBox",
+    "LCUQRegs",
     "SerialLCUOperator",
 ]

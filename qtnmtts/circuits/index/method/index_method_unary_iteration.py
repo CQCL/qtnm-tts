@@ -178,7 +178,7 @@ class IndexUnaryIteration(IndexMethodBase):
             control_1 (bool): The second control bool.
 
         """
-        circ = Circuit(3, f"Toffoli{int(control_0),int(control_1)}")
+        circ = Circuit(3, f"Toffoli{int(control_0), int(control_1)}")
         if not control_0:
             circ.X(0)
         if not control_1:

@@ -200,21 +200,21 @@ def unitary_postselect(
         if pre_select_dict is not None:
             pre_select_bit = pre_select_dict[dict_first_entry]
             if dict_first_bit == 0 and pre_select_bit == 0:
-                new_u: NDArray[np.complex128] = u[: 2 ** (n - 1), : 2 ** (n - 1)]
+                new_u: NDArray[np.complex128] = u[: 2 ** (n - 1), : 2 ** (n - 1)]  # type: ignore
             elif dict_first_bit == 1 and pre_select_bit == 0:
-                new_u: NDArray[np.complex128] = u[2 ** (n - 1) :, : 2 ** (n - 1)]
+                new_u: NDArray[np.complex128] = u[2 ** (n - 1) :, : 2 ** (n - 1)]  # type: ignore
             elif dict_first_bit == 0 and pre_select_bit == 1:
-                new_u: NDArray[np.complex128] = u[: 2 ** (n - 1), 2 ** (n - 1) :]
+                new_u: NDArray[np.complex128] = u[: 2 ** (n - 1), 2 ** (n - 1) :]  # type: ignore
             elif dict_first_bit == 1 and pre_select_bit == 1:
-                new_u: NDArray[np.complex128] = u[2 ** (n - 1) :, 2 ** (n - 1) :]
+                new_u: NDArray[np.complex128] = u[2 ** (n - 1) :, 2 ** (n - 1) :]  # type: ignore
             else:
                 raise ValueError("post_select_dict[q] must be 0 or 1")
             del pre_select_dict[q]
         else:
             if dict_first_bit == 0:
-                new_u: NDArray[np.complex128] = u[: 2 ** (n - 1), : 2 ** (n - 1)]
+                new_u: NDArray[np.complex128] = u[: 2 ** (n - 1), : 2 ** (n - 1)]  # type: ignore
             elif dict_first_bit == 1:
-                new_u: NDArray[np.complex128] = u[2 ** (n - 1) :, : 2 ** (n - 1)]
+                new_u: NDArray[np.complex128] = u[2 ** (n - 1) :, : 2 ** (n - 1)]  # type: ignore
             else:
                 raise ValueError("post_select_dict[q] must be 0 or 1")
 
@@ -222,9 +222,9 @@ def unitary_postselect(
         del q_list_reordered[0]
 
         qlist = q_list_reordered
-        unitary = new_u
+        unitary = new_u  # type: ignore
 
-    return unitary
+    return unitary  # type: ignore
 
 
 def circuit_unitary_postselect(

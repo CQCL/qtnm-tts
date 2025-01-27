@@ -7,8 +7,8 @@ from .select_index_box import SelectIndexBox
 
 __all__ = [
     "SelectBox",
-    "SelectQRegs",
-    "SelectMultiplexorBox",
     "SelectCircBox",
     "SelectIndexBox",
+    "SelectMultiplexorBox",
+    "SelectQRegs",
 ]

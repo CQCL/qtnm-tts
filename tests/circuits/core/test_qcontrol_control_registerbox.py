@@ -9,7 +9,11 @@ from qtnmtts.measurement.utils import circuit_unitary_postselect
 from qtnmtts.circuits.lcu import LCUMultiplexorBox, LCUBox
 from pytket.utils.operators import QubitPauliOperator
 
-from qtnmtts.circuits.core import PytketQControlRegisterBox, QRegMap, QControlRegisterBox
+from qtnmtts.circuits.core import (
+    PytketQControlRegisterBox,
+    QRegMap,
+    QControlRegisterBox,
+)
 from qtnmtts.circuits.qft import QFTBox
 
 from pytket.pauli import Pauli, QubitPauliString

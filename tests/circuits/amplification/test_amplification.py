@@ -22,7 +22,7 @@ from pytest_lazyfixture import lazy_fixture
     ],
 )
 def success_probability(op: QubitPauliOperator, state0: NDArray[np.complex128]):
-    "The theoretical success probability and amplified one." ""
+    """Theoretical success probability and amplified one."""
     n_state_qubits = (
         max([p.index[0] for p_list in list(op._dict.keys()) for p in p_list.map.keys()])
         + 1

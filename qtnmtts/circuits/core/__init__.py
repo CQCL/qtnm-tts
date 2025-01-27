@@ -7,12 +7,12 @@ from .power_registerbox import PowerBox
 from .qreg_functions import extend_new_qreg_dataclass, make_qreg_dataclass
 
 __all__ = [
-    "RegisterBox",
-    "make_qreg_dataclass",
-    "RegisterCircuit",
-    "QRegMap",
-    "QControlRegisterBox",
-    "PytketQControlRegisterBox",
     "PowerBox",
+    "PytketQControlRegisterBox",
+    "QControlRegisterBox",
+    "QRegMap",
+    "RegisterBox",
+    "RegisterCircuit",
     "extend_new_qreg_dataclass",
+    "make_qreg_dataclass",
 ]
