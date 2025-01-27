@@ -1,0 +1,67 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "qtnmtts"
+version = "0.0.1"
+description = "A python library using pytket to write truncated taylor series quantum algorithms"
+requires-python = ">=3.11"
+authors = [{name = "Nathan Fitzpatrick", email = "nathan.fitzpatrick@quantinuum.com" }]
+dependencies = [
+    "pyright",
+    "black",
+    "sphinx",
+    "types-pkg_resources==0.1.3",
+    "pytket==1.29",
+    "pytket-qiskit",
+    "pytket-qulacs",
+    "pre-commit",
+    "wheel",
+    "pytest<8.0.0",
+    "py",
+    "pytest-parallel",
+    "pytest-lazy-fixture",
+    "ipykernel",
+    "numpy<2.0",
+    "numba",
+    "pandas",
+    "pandas-stubs",
+    "sympy==1.12",
+    "stim",
+    "nbconvert",
+    "nbformat",
+    "matplotlib"
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[tool.ruff]
+# Enable flake8-bugbear (`B`) rules, pandas, see https://beta.ruff.rs/docs/rules/
+lint.select = ["E", "F", "B", "RUF","PT","UP", "C4", "D"]
+lint.ignore = ["RUF002"]
+extend-exclude = ["**/*.ipynb", "tests/conftest.py", ".venv/**", "docs/**", "qtnmtts/_types/_type_stubs/**"]
+target-version = "py311"
+[tool.lint.ruff.per-file-ignores]
+"__init__.py" = ["F401"]
+"tests/conftest.py" = ["D103"]
+
+[tool.lint.ruff.pydocstyle]
+# Use Google-style docstrings.
+convention = "google"
+
+#https://microsoft.github.io/pyright/#/getting-started
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+include = ["qtnmtts","tests"]
+ignore = ["**/*.ipynb", ".venv/**", "docs/**"]
+pythonVersion = "3.11"
+typeCheckingMode = "strict"
+stubPath = "qtnmtts/_types/_type_stubs"
+reportPrivateUsage = false
+
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
