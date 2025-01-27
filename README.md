@@ -1,6 +1,6 @@
 # qtnmtts
 
-This is a Python 3.12 & 3.13 app called qtnmtts. It is an Quantinuum library for truncated taylor series LCU algorithms.
+This is a Python 3.12 app called qtnmtts. It is an Quantinuum library for truncated taylor series LCU algorithms.
 
 
 
