@@ -5,7 +5,7 @@ from qtnmtts.circuits.core import RegisterBox, RegisterCircuit
 from pytket.circuit import PauliExpBox, QubitRegister
 from pytket.pauli import QubitPauliString
 from pytket.utils import QubitPauliOperator
-from sympy import Symbol
+from sympy import Symbol  # type: ignore
 
 
 @dataclass
@@ -41,7 +41,7 @@ class PauliTerm:
 
     """
 
-    def __init__(self, pauli_string: QubitPauliString, coeff: float | Symbol):
+    def __init__(self, pauli_string: QubitPauliString, coeff: float):
         """Initialise the PauliTerm class."""
         self.qubits = list(pauli_string.map.keys())
         self.q_inds = [q.index[0] for q in self.qubits]

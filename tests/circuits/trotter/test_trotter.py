@@ -7,7 +7,7 @@ from pytket.utils import QubitPauliOperator
 from pytest_lazyfixture import lazy_fixture
 from scipy.linalg import expm
 from numpy.typing import NDArray
-from sympy import Symbol
+from sympy import Symbol  # type: ignore
 from qtnmtts.circuits.utils._testing import qcontrol_test
 
 

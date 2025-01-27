@@ -1,5 +1,4 @@
 from typing import ClassVar, Protocol
-from sympy import Expr
 
 
 class IsDataclass(Protocol):
@@ -8,4 +7,4 @@ class IsDataclass(Protocol):
     __dataclass_fields__: ClassVar[dict[str, str]]
 
 
-CoeffType = int | float | complex | Expr
+CoeffType = int | float | complex
