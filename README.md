@@ -22,6 +22,7 @@ python -m pip install uv
 uv venv .venv -p 3.12
 source .venv/bin/activate
 uv sync
+pre-commit install
 pre-commit run --all-files
 ```
 
