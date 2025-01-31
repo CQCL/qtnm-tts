@@ -16,6 +16,7 @@ dependencies = [
     "pytket",
     "pytket-qiskit",
     "pytket-qulacs",
+    "pytket-quantinuum",
     "pre-commit",
     "wheel",
     "pytest<8.0.0",
